@@ -1,0 +1,220 @@
+fragment GlobalParts on Global {
+  __typename
+  companyName
+  phone
+  email
+  address
+  hours
+}
+
+fragment HomeParts on Home {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  heroCta2Text
+  heroCta2Link
+  heroStats {
+    __typename
+    value
+    label
+  }
+  services {
+    __typename
+    badge
+    title
+    description
+    link
+  }
+  batterySplitImage
+  batterySplitHeading
+  batterySplitText
+  batterySplitCtaText
+  batterySplitCtaLink
+  whyUs {
+    __typename
+    title
+    description
+  }
+  equipmentSplitImage
+  equipmentSplitHeading
+  equipmentSplitText
+  equipmentSplitCtaText
+  equipmentSplitCtaLink
+  bannerImage
+  bannerHeading
+  bannerText
+  ctaHeading
+  ctaText
+  ctaCta1Text
+  ctaCta1Link
+  ctaCta2Text
+  ctaCta2Link
+}
+
+fragment BatteriesParts on Batteries {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  heroCta2Text
+  heroCta2Link
+  lithiumHeading
+  lithiumSubtitle
+  lithiumCards {
+    __typename
+    badge
+    title
+    description
+  }
+  splitImage
+  splitHeading
+  splitText
+  splitCtaText
+  splitCtaLink
+  rejuvHeading
+  rejuvSubtitle
+  rejuvCards {
+    __typename
+    title
+    description
+  }
+  rejuvCtaText
+  rejuvCtaLink
+  equipHeading
+  equipSubtitle
+  equipCards {
+    __typename
+    title
+    description
+  }
+  ctaHeading
+  ctaText
+}
+
+fragment ServiceParts on Service {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  heroCta2Text
+  heroCta2Link
+  serviceCards {
+    __typename
+    badge
+    title
+    description
+  }
+  bannerImage
+  bannerHeading
+  bannerText
+  equipHeading
+  equipSubtitle
+  equipCards {
+    __typename
+    title
+    description
+  }
+  ctaHeading
+  ctaText
+}
+
+fragment EquipmentParts on Equipment {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  heroCta2Text
+  heroCta2Link
+  equipCards {
+    __typename
+    badge
+    title
+    description
+  }
+  bannerImage
+  bannerHeading
+  bannerText
+  inventoryHeading
+  inventorySubtitle
+  inventoryPlaceholder
+  whyBuyCards {
+    __typename
+    title
+    description
+  }
+  ctaHeading
+  ctaText
+}
+
+fragment RackingParts on Racking {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  rackingHeading
+  rackingSubtitle
+  rackingCards {
+    __typename
+    badge
+    title
+    description
+  }
+  bannerImage
+  bannerHeading
+  bannerText
+  dockHeading
+  dockSubtitle
+  dockCards {
+    __typename
+    title
+    description
+  }
+  ctaHeading
+  ctaText
+}
+
+fragment PartsParts on Parts {
+  __typename
+  seoTitle
+  seoDescription
+  heroBadge
+  heroTitle
+  heroHighlight
+  heroDescription
+  heroCta1Text
+  heroCta1Link
+  featureCards {
+    __typename
+    badge
+    title
+    description
+  }
+  ctaHeading
+  ctaText
+}

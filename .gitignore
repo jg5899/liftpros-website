@@ -13,8 +13,8 @@ yarn-error.log*
 pnpm-debug.log*
 
 
-# TinaCMS generated
-tina/__generated__
+# TinaCMS generated (keeping in git for Cloudflare Pages builds)
+# tina/__generated__
 
 # environment variables
 .env

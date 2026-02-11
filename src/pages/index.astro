@@ -3,12 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-import client from '../../tina/__generated__/client';
+import homeData from '../../content/pages/home.json';
+import globalData from '../../content/global/settings.json';
 
-const homeResult = await client.queries.home({ relativePath: 'home.json' });
-const d = homeResult.data.home;
-const globalResult = await client.queries.global({ relativePath: 'settings.json' });
-const g = globalResult.data.global;
+const d = homeData;
+const g = globalData;
 ---
 
 <Layout title={d.seoTitle} description={d.seoDescription}>

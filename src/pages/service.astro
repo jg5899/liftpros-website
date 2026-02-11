@@ -3,10 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-import client from '../../tina/__generated__/client';
-
-const result = await client.queries.service({ relativePath: 'service.json' });
-const d = result.data.service;
+import d from '../../content/pages/service.json';
 ---
 
 <Layout title={d.seoTitle} description={d.seoDescription}>

@@ -1,0 +1,115 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Lift Pros | Forklift & Material Handling Service, Sales & Fleet Management",
+  description = "Central Valley's trusted partner for forklift repair, lithium battery solutions, preventive maintenance, fleet management, equipment sales, racking, dock doors, and field service. Serving Fresno, Bakersfield, Stockton, and all of California from Fowler, CA."
+} = Astro.props;
+
+const siteUrl = "https://liftprosinc.com";
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${siteUrl}${currentPath}`} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Lift Pros" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={`${siteUrl}${currentPath}`} />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Central Valley Lift Pros",
+      "description": "Full-service forklift and material handling equipment company specializing in lithium battery solutions, equipment sales, repair, preventive maintenance, fleet management, racking, and dock doors.",
+      "url": siteUrl,
+      "telephone": "+1-559-483-9300",
+      "email": "service@liftprosinc.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4818 E Clayton Ave",
+        "addressLocality": "Fowler",
+        "addressRegion": "CA",
+        "postalCode": "93625",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.631,
+        "longitude": -119.718
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "California" },
+        { "@type": "City", "name": "Fresno" },
+        { "@type": "City", "name": "Bakersfield" },
+        { "@type": "City", "name": "Stockton" },
+        { "@type": "City", "name": "Visalia" },
+        { "@type": "City", "name": "Modesto" }
+      ],
+      "serviceType": [
+        "Forklift Repair",
+        "Forklift Sales",
+        "Lithium Battery Sales",
+        "Battery Rejuvenation",
+        "Preventive Maintenance",
+        "Fleet Management",
+        "Field Service",
+        "Warehouse Racking",
+        "Dock Door Service",
+        "Forklift Parts"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "TAILIFT"
+      },
+      "priceRange": "$$"
+    })} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Mobile menu toggle
+      const toggle = document.querySelector('.mobile-toggle');
+      const nav = document.querySelector('.nav');
+      toggle?.addEventListener('click', () => {
+        nav?.classList.toggle('open');
+      });
+      // Close menu on link click
+      nav?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => nav?.classList.remove('open'));
+      });
+    </script>
+  </body>
+</html>

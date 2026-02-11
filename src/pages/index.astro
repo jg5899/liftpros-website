@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import WhyUs from '../components/WhyUs.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout>
+  <Header />
+  <Hero />
+  <Services />
+
+  <!-- Split: Battery callout with image -->
+  <div class="split">
+    <div class="split-image" style="background-image: url('/images/electric-forklift.jpg');"></div>
+    <div class="split-content">
+      <h2>Premier Battery Sales & Service Center</h2>
+      <p>
+        The industry is shifting to lithium and we're leading the charge in the Central Valley.
+        From full fleet conversions to single-unit upgrades, we sell, install, and service
+        every battery. Not ready for lithium? Try our lead acid rejuvenation &mdash; free first sample.
+      </p>
+      <a href="/batteries" class="btn btn-primary">Battery Solutions</a>
+    </div>
+  </div>
+
+  <WhyUs />
+
+  <!-- Split: Equipment with image (reversed) -->
+  <div class="split split--reverse">
+    <div class="split-image" style="background-image: url('/images/cold-storage.jpg');"></div>
+    <div class="split-content">
+      <h2>New & Used Equipment Sales</h2>
+      <p>
+        Authorized TAILIFT dealer with new and certified used forklifts, scissor lifts,
+        narrow aisle, and cold storage equipment. We service everything we sell &mdash;
+        local support from day one. Dead lift? We'll haul it away free.
+      </p>
+      <a href="/equipment" class="btn btn-primary">View Equipment</a>
+    </div>
+  </div>
+
+  <!-- Image banner break -->
+  <div class="image-banner" style="background-image: url('/images/warehouse-racking.jpg');">
+    <div class="container">
+      <h2>Complete Facility Solutions</h2>
+      <p>Racking, dock doors, equipment, batteries, parts, and service &mdash; one call.</p>
+    </div>
+  </div>
+
+  <CtaBanner />
+  <Contact />
+  <Footer />
+</Layout>

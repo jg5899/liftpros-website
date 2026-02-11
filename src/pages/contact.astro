@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Contact Lift Pros | Request Service, Quote, or Parts | Fowler, CA"
+  description="Contact Lift Pros for forklift service, equipment quotes, lithium battery solutions, parts, racking, dock doors, and free junk lift haul-away. Located in Fowler, CA serving the Central Valley."
+>
+  <Header />
+
+  <section class="hero page-hero" style="min-height: 280px; margin-top: 102px;">
+    <div class="container">
+      <div class="hero-content" style="padding: 2rem 0;">
+        <h1>Get in <span class="highlight">Touch</span></h1>
+        <p>
+          Service request, equipment quote, battery assessment, or parts order &mdash;
+          we're here to help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+
+          <div class="contact-item">
+            <div>
+              <span class="contact-item-label">Phone</span>
+              <span class="contact-item-value"><a href="tel:5594839300">(559) 483-9300</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value"><a href="mailto:service@liftprosinc.com">service@liftprosinc.com</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div>
+              <span class="contact-item-label">Address</span>
+              <span class="contact-item-value">4818 E Clayton Ave<br />Fowler, CA 93625</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div>
+              <span class="contact-item-label">Hours</span>
+              <span class="contact-item-value">Monday - Saturday: 8:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 1.5rem; background: var(--off-white); border: 1px solid var(--border);">
+            <h4 style="color: var(--navy); margin-bottom: 0.5rem; font-size: 0.9375rem;">Free Junk Lift Haul Away</h4>
+            <p style="color: var(--gray); font-size: 0.875rem; line-height: 1.6;">
+              Dead forklift or scissor lift? We'll haul it away at no cost from
+              anywhere in the Central Valley or greater California. Just mention
+              it in your message.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form" action="mailto:service@liftprosinc.com" method="POST" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">I'm Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select...</option>
+                <option value="repair">Repair & Service</option>
+                <option value="pm">Preventive Maintenance Program</option>
+                <option value="batteries-lithium">Lithium Battery Solutions</option>
+                <option value="batteries-rejuv">Battery Rejuvenation</option>
+                <option value="equipment-new">New Equipment Purchase</option>
+                <option value="equipment-used">Used Equipment Purchase</option>
+                <option value="leasing">Equipment Leasing</option>
+                <option value="racking">Racking</option>
+                <option value="dock-doors">Dock Doors</option>
+                <option value="parts">Parts</option>
+                <option value="fleet">Fleet Management</option>
+                <option value="haul-away">Free Junk Lift Haul Away</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your needs - equipment type, model, location, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+            <p style="margin-top: 0.75rem; font-size: 0.75rem; color: var(--mid-gray); text-align: center;">
+              We don't share your information. Expect a response within 1 business day.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section style="padding: 0;">
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=4818+E+Clayton+Ave+Fowler+CA+93625"
+      width="100%"
+      height="350"
+      style="border:0; display:block;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Lift Pros Location - Fowler, CA"
+    ></iframe>
+  </section>
+
+  <Footer />
+</Layout>

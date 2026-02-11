@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Forklift Repair, Preventive Maintenance & Fleet Management | Lift Pros"
+  description="Expert forklift and material handling equipment repair, scheduled preventive maintenance, fleet management, and mobile field service across California's Central Valley."
+>
+  <Header />
+
+  <section class="hero page-hero" style="margin-top: 102px;">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Service & Maintenance</span>
+        <h1>Keep Your Fleet <span class="highlight">Running</span></h1>
+        <p>
+          From emergency breakdowns to scheduled PM programs, our mobile
+          technicians and shop team keep your equipment productive and your
+          operations moving.
+        </p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-primary">Schedule Service</a>
+          <a href="#pm" class="btn btn-outline">PM Programs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="section-title section-title--center">Our Services</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-label">Repair</span>
+          <h3>Repair & Diagnostics</h3>
+          <p>
+            Engine, transmission, hydraulic, electrical, and brake repair for all
+            makes and models. In-shop and on-site service available.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-label">Mobile</span>
+          <h3>Field Service</h3>
+          <p>
+            Our technicians come to you with fully stocked service vans. GPS-tracked
+            dispatch across the entire Central Valley.
+          </p>
+        </div>
+
+        <div class="service-card" id="pm">
+          <span class="service-label">PM</span>
+          <h3>Preventive Maintenance</h3>
+          <p>
+            Scheduled PM programs tailored to your fleet. Multi-point inspections,
+            fluid services, and compliance documentation included.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-label">Fleet</span>
+          <h3>Fleet Management</h3>
+          <p>
+            Full lifecycle management for your equipment fleet. Service history,
+            cost tracking, warranty management, and reporting.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-label">Contract</span>
+          <h3>Service Contracts</h3>
+          <p>
+            Lock in rates and priority response times with a service agreement.
+            Custom contracts based on fleet size and usage patterns.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-label">Warranty</span>
+          <h3>Warranty Support</h3>
+          <p>
+            We track warranty coverage across your fleet and handle claims.
+            Authorized warranty service for TAILIFT and other brands.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image break -->
+  <div class="image-banner" style="background-image: url('/images/service-technician.jpg');">
+    <div class="container">
+      <h2>Fully Stocked Mobile Service Vans</h2>
+      <p>Our technicians come to your location with the parts and tools to get you running.</p>
+    </div>
+  </div>
+
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="section-title section-title--center">Equipment We Service</h2>
+        <p class="section-subtitle">If it's in your warehouse or on your dock, we can fix it.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <div>
+            <h3>Forklifts</h3>
+            <p>Propane, electric, and diesel. Sit-down, stand-up, and 3-wheel. All makes and models.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <div>
+            <h3>Scissor Lifts</h3>
+            <p>Electric and rough terrain scissor lifts. One of the few full-service scissor lift shops in the Valley.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <div>
+            <h3>Narrow Aisle & Cold Storage</h3>
+            <p>Reach trucks, order pickers, turret trucks, and freezer-rated equipment.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <div>
+            <h3>Pallet Jacks & More</h3>
+            <p>Electric pallet jacks, walkie riders, tow tractors, and aerial lifts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div>
+        <h2>Need Service?</h2>
+        <p>
+          Emergency repair or scheduled maintenance &mdash; call us now or submit a
+          service request online.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary">Request Service</a>
+        <a href="tel:5594839300" class="btn btn-outline">Emergency Line</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

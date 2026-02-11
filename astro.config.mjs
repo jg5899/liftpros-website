@@ -1,5 +1,22 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [react()],
+  vite: {
+    build: {
+      rollupOptions: {
+        onwarn(warning, warn) {
+          if (
+            warning.code === 'UNUSED_EXTERNAL_IMPORT' &&
+            warning.exporter === 'tinacms/dist/client'
+          ) {
+            return;
+          }
+          warn(warning);
+        },
+      },
+    },
+  },
+});

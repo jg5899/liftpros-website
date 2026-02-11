@@ -1,0 +1,34 @@
+{
+  "seoTitle": "New & Used Forklifts, Scissor Lifts & Material Handling Equipment | Lift Pros",
+  "seoDescription": "Buy or lease new and used forklifts, scissor lifts, narrow aisle, and cold storage equipment. Authorized TAILIFT dealer in Fowler, CA serving the Central Valley.",
+  "heroBadge": "Authorized TAILIFT Dealer",
+  "heroTitle": "New & Used",
+  "heroHighlight": "Equipment",
+  "heroDescription": "Forklifts, scissor lifts, narrow aisle, and cold storage equipment. Buy or lease with competitive financing. We service everything we sell.",
+  "heroCta1Text": "Request a Quote",
+  "heroCta1Link": "/contact",
+  "heroCta2Text": "View Inventory",
+  "heroCta2Link": "#inventory",
+  "equipCards": [
+    { "badge": "Core", "title": "Forklifts", "description": "Propane and electric sit-down riders, stand-up counterbalance, and 3-wheel models. New TAILIFT units and quality used equipment." },
+    { "badge": "Specialty", "title": "Narrow Aisle Equipment", "description": "Reach trucks, order pickers, turret trucks, and VNA systems for maximizing warehouse storage density." },
+    { "badge": "Specialty", "title": "Cold Storage Equipment", "description": "Freezer-rated forklifts and material handling equipment designed for sub-zero warehouse and distribution environments." },
+    { "badge": "", "title": "Scissor Lifts", "description": "Electric and rough terrain scissor lifts for warehouse, construction, and maintenance applications." },
+    { "badge": "", "title": "Pallet Jacks & Stackers", "description": "Electric pallet jacks, walkie stackers, and rider pallet trucks for dock and floor operations." },
+    { "badge": "", "title": "Tow Tractors & Specialty", "description": "Tow tractors, burden carriers, personnel carriers, and specialty material handling solutions." }
+  ],
+  "bannerImage": "/images/hero-bg.jpg",
+  "bannerHeading": "Authorized TAILIFT Dealer",
+  "bannerText": "New equipment backed by factory warranty and local service support.",
+  "inventoryHeading": "Current Inventory",
+  "inventorySubtitle": "Contact us for our current list of available new and used equipment. Inventory changes frequently — call for the latest availability.",
+  "inventoryPlaceholder": "We're building out our online inventory. In the meantime, give us a call or send a message and we'll get you a list of what's available.",
+  "whyBuyCards": [
+    { "title": "We Service What We Sell", "description": "Every unit we sell is backed by our service team. Local repair, maintenance, and parts support from day one." },
+    { "title": "Inspected & Certified Used", "description": "Every used unit goes through our inspection process. We stand behind the equipment we sell." },
+    { "title": "Lease & Financing Options", "description": "Flexible lease programs and financing to fit your budget. Short-term rentals available for seasonal needs." },
+    { "title": "Free Junk Lift Haul Away", "description": "Replacing old equipment? We'll haul away your dead lifts at no cost anywhere in the Central Valley or greater California." }
+  ],
+  "ctaHeading": "Looking for Equipment?",
+  "ctaText": "Tell us what you need — make, model, capacity, application — and we'll find it. New or used."
+}

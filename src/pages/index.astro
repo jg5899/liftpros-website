@@ -1,59 +1,123 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import WhyUs from '../components/WhyUs.astro';
-import CtaBanner from '../components/CtaBanner.astro';
-import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import client from '../../tina/__generated__/client';
+
+const homeResult = await client.queries.home({ relativePath: 'home.json' });
+const d = homeResult.data.home;
+const globalResult = await client.queries.global({ relativePath: 'settings.json' });
+const g = globalResult.data.global;
 ---
 
-<Layout>
+<Layout title={d.seoTitle} description={d.seoDescription}>
   <Header />
-  <Hero />
-  <Services />
+
+  <!-- Hero -->
+  <section class="hero" style="margin-top: 102px;">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">{d.heroBadge}</span>
+        <h1>{d.heroTitle} <span class="highlight">{d.heroHighlight}</span></h1>
+        <p>{d.heroDescription}</p>
+        <div class="hero-buttons">
+          <a href={d.heroCta1Link} class="btn btn-primary">{d.heroCta1Text}</a>
+          <a href={d.heroCta2Link} class="btn btn-outline">{d.heroCta2Text}</a>
+        </div>
+        <div class="hero-stats">
+          {d.heroStats?.map((stat: any) => (
+            <div class="hero-stat">
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="section-title section-title--center">What We Do</h2>
+        <p class="section-subtitle">From lithium battery conversions to dock door installs, we're your single source for everything in your warehouse.</p>
+      </div>
+      <div class="services-grid">
+        {d.services?.map((svc: any) => (
+          <div class="service-card">
+            {svc.badge && <span class="service-label">{svc.badge}</span>}
+            <h3>{svc.title}</h3>
+            <p>{svc.description}</p>
+            {svc.link && <a href={svc.link} class="card-link">Learn More &rarr;</a>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Split: Battery callout with image -->
   <div class="split">
-    <div class="split-image" style="background-image: url('/images/electric-forklift.jpg');"></div>
+    <div class="split-image" style={`background-image: url('${d.batterySplitImage}');`}></div>
     <div class="split-content">
-      <h2>Premier Battery Sales & Service Center</h2>
-      <p>
-        The industry is shifting to lithium and we're leading the charge in the Central Valley.
-        From full fleet conversions to single-unit upgrades, we sell, install, and service
-        every battery. Not ready for lithium? Try our lead acid rejuvenation &mdash; free first sample.
-      </p>
-      <a href="/batteries" class="btn btn-primary">Battery Solutions</a>
+      <h2>{d.batterySplitHeading}</h2>
+      <p>{d.batterySplitText}</p>
+      <a href={d.batterySplitCtaLink} class="btn btn-primary">{d.batterySplitCtaText}</a>
     </div>
   </div>
 
-  <WhyUs />
+  <!-- Why Us -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="section-title section-title--center">Why Lift Pros</h2>
+        <p class="section-subtitle">One call for everything in your warehouse. We're not just a repair shop.</p>
+      </div>
+      <div class="why-grid">
+        {d.whyUs?.map((card: any) => (
+          <div class="why-card">
+            <div>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Split: Equipment with image (reversed) -->
   <div class="split split--reverse">
-    <div class="split-image" style="background-image: url('/images/cold-storage.jpg');"></div>
+    <div class="split-image" style={`background-image: url('${d.equipmentSplitImage}');`}></div>
     <div class="split-content">
-      <h2>New & Used Equipment Sales</h2>
-      <p>
-        Authorized TAILIFT dealer with new and certified used forklifts, scissor lifts,
-        narrow aisle, and cold storage equipment. We service everything we sell &mdash;
-        local support from day one. Dead lift? We'll haul it away free.
-      </p>
-      <a href="/equipment" class="btn btn-primary">View Equipment</a>
+      <h2>{d.equipmentSplitHeading}</h2>
+      <p>{d.equipmentSplitText}</p>
+      <a href={d.equipmentSplitCtaLink} class="btn btn-primary">{d.equipmentSplitCtaText}</a>
     </div>
   </div>
 
   <!-- Image banner break -->
-  <div class="image-banner" style="background-image: url('/images/warehouse-racking.jpg');">
+  <div class="image-banner" style={`background-image: url('${d.bannerImage}');`}>
     <div class="container">
-      <h2>Complete Facility Solutions</h2>
-      <p>Racking, dock doors, equipment, batteries, parts, and service &mdash; one call.</p>
+      <h2>{d.bannerHeading}</h2>
+      <p>{d.bannerText}</p>
     </div>
   </div>
 
-  <CtaBanner />
-  <Contact />
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div>
+        <h2>{d.ctaHeading}</h2>
+        <p>{d.ctaText}</p>
+      </div>
+      <div class="cta-actions">
+        <a href={d.ctaCta1Link} class="btn btn-primary">{d.ctaCta1Text}</a>
+        <a href={d.ctaCta2Link} class="btn btn-outline">{d.ctaCta2Text}</a>
+      </div>
+    </div>
+  </section>
+
   <Footer />
 </Layout>

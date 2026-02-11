@@ -1,0 +1,49 @@
+{
+  "seoTitle": "Forklift Battery Sales & Service | Lithium Batteries | Battery Rejuvenation | Lift Pros",
+  "seoDescription": "Premier forklift battery sales and service center in Central Valley, CA. Lithium battery conversions, lead acid rejuvenation, and free battery demos. Serving Fresno, Bakersfield, Stockton, and all of California.",
+  "heroBadge": "Premier Battery Center",
+  "heroTitle": "Forklift",
+  "heroHighlight": "Battery",
+  "heroDescription": "Upgrade your fleet to lithium. Extend the life of your lead acid batteries. Central Valley's go-to battery specialists for warehouses, cold storage, and distribution centers.",
+  "heroCta1Text": "Free Battery Assessment",
+  "heroCta1Link": "/contact",
+  "heroCta2Text": "Free Sample Offer",
+  "heroCta2Link": "#rejuvenation",
+  "lithiumHeading": "Lithium Battery Solutions",
+  "lithiumSubtitle": "The industry is moving to lithium. We make the switch simple, affordable, and fully supported with local service.",
+  "lithiumCards": [
+    { "badge": "Efficiency", "title": "Opportunity Charging", "description": "No more battery swap rooms. Lithium batteries charge during breaks and shift changes. Plug in for 15 minutes, get hours of runtime." },
+    { "badge": "Cold Storage", "title": "Freezer Ready", "description": "Lithium batteries perform in freezer and cold storage environments where lead acid struggles. Consistent power output down to -22°F." },
+    { "badge": "ROI", "title": "Lower Total Cost", "description": "3-4x longer lifespan than lead acid. No watering, no equalizing, no dedicated charging rooms. The ROI is clear within the first year." },
+    { "badge": "Compatibility", "title": "Drop-In Replacement", "description": "Lithium batteries fit your existing equipment. No modifications needed for most forklifts and material handling equipment." },
+    { "badge": "Fleet", "title": "Fleet-Wide Conversion", "description": "We plan and execute full fleet conversions. Phased rollouts available to fit your budget and operations schedule." },
+    { "badge": "Local", "title": "Service & Support", "description": "Not a drop-ship vendor. We install, service, and support every battery we sell. On-site diagnostics and warranty support included." }
+  ],
+  "splitImage": "/images/dock-door.jpg",
+  "splitHeading": "Why Operations Managers Are Switching to Lithium",
+  "splitText": "Eliminate battery swap rooms. Cut maintenance costs by 50%. Get consistent power in freezer environments where lead acid fails. Our fleet conversion specialists handle the transition from assessment to installation.",
+  "splitCtaText": "Schedule a Fleet Assessment",
+  "splitCtaLink": "/contact",
+  "rejuvHeading": "Battery Rejuvenation",
+  "rejuvSubtitle": "Not ready for lithium? Extend the life of your lead acid batteries by up to 50% with our rejuvenation service. We'll prove it works for free.",
+  "rejuvCards": [
+    { "title": "How It Works", "description": "Our rejuvenation process breaks down sulfation buildup on lead acid battery plates, restoring capacity lost over time. Most batteries recover 70-90% of original capacity." },
+    { "title": "Free Sample — No Risk", "description": "Send us one battery or we'll come pick it up. We'll rejuvenate it and return it at no charge. See the results yourself before committing to your full fleet." },
+    { "title": "Fraction of Replacement Cost", "description": "A new forklift battery runs $3,000-$8,000+. Rejuvenation costs a fraction of that and gives you years of additional service life." },
+    { "title": "Reduce Waste", "description": "Keep batteries out of the recycling stream longer. Better for your budget and better for the environment. Responsible fleet management." }
+  ],
+  "rejuvCtaText": "Request Your Free Battery Sample",
+  "rejuvCtaLink": "/contact",
+  "equipHeading": "Equipment We Power",
+  "equipSubtitle": "Batteries for every application in your warehouse, yard, or distribution center.",
+  "equipCards": [
+    { "title": "Standard Forklifts", "description": "Sit-down riders, stand-up counterbalance, and 3-wheel electric forklifts." },
+    { "title": "Narrow Aisle", "description": "Reach trucks, order pickers, turret trucks, and very narrow aisle (VNA) equipment." },
+    { "title": "Cold Storage", "description": "Freezer-rated batteries and equipment built to perform in sub-zero environments." },
+    { "title": "Pallet Jacks", "description": "Electric pallet jacks, walkie riders, and end riders for dock and floor operations." },
+    { "title": "Scissor Lifts", "description": "Battery packs for electric scissor lifts and aerial work platforms." },
+    { "title": "Tow Tractors & AGVs", "description": "Batteries for tow tractors, burden carriers, and automated guided vehicles." }
+  ],
+  "ctaHeading": "Ready to Talk Batteries?",
+  "ctaText": "Whether you're exploring lithium, need a rejuvenation quote, or want to take us up on our free sample offer."
+}

@@ -3,28 +3,25 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import client from '../../tina/__generated__/client';
+
+const result = await client.queries.batteries({ relativePath: 'batteries.json' });
+const d = result.data.batteries;
 ---
 
-<Layout
-  title="Forklift Battery Sales & Service | Lithium Batteries | Battery Rejuvenation | Lift Pros"
-  description="Premier forklift battery sales and service center in Central Valley, CA. Lithium battery conversions, lead acid rejuvenation, and free battery demos. Serving Fresno, Bakersfield, Stockton, and all of California."
->
+<Layout title={d.seoTitle} description={d.seoDescription}>
   <Header />
 
   <!-- Hero -->
   <section class="hero page-hero" style="margin-top: 102px;">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-badge">Premier Battery Center</span>
-        <h1>Forklift <span class="highlight">Battery</span> Sales & Service</h1>
-        <p>
-          Upgrade your fleet to lithium. Extend the life of your lead acid batteries.
-          Central Valley's go-to battery specialists for warehouses, cold storage,
-          and distribution centers.
-        </p>
+        <span class="hero-badge">{d.heroBadge}</span>
+        <h1>{d.heroTitle} <span class="highlight">{d.heroHighlight}</span> Sales & Service</h1>
+        <p>{d.heroDescription}</p>
         <div class="hero-buttons">
-          <a href="/contact" class="btn btn-primary">Free Battery Assessment</a>
-          <a href="#rejuvenation" class="btn btn-outline">Free Sample Offer</a>
+          <a href={d.heroCta1Link} class="btn btn-primary">{d.heroCta1Text}</a>
+          <a href={d.heroCta2Link} class="btn btn-outline">{d.heroCta2Text}</a>
         </div>
       </div>
     </div>
@@ -34,82 +31,28 @@ import '../styles/global.css';
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <h2 class="section-title section-title--center">Lithium Battery Solutions</h2>
-        <p class="section-subtitle">
-          The industry is moving to lithium. We make the switch simple, affordable, and
-          fully supported with local service.
-        </p>
+        <h2 class="section-title section-title--center">{d.lithiumHeading}</h2>
+        <p class="section-subtitle">{d.lithiumSubtitle}</p>
       </div>
-
       <div class="services-grid">
-        <div class="service-card">
-          <span class="service-label">Efficiency</span>
-          <h3>Opportunity Charging</h3>
-          <p>
-            No more battery swap rooms. Lithium batteries charge during breaks and
-            shift changes. Plug in for 15 minutes, get hours of runtime.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Cold Storage</span>
-          <h3>Freezer Ready</h3>
-          <p>
-            Lithium batteries perform in freezer and cold storage environments where
-            lead acid struggles. Consistent power output down to -22&deg;F.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">ROI</span>
-          <h3>Lower Total Cost</h3>
-          <p>
-            3-4x longer lifespan than lead acid. No watering, no equalizing, no
-            dedicated charging rooms. The ROI is clear within the first year.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Compatibility</span>
-          <h3>Drop-In Replacement</h3>
-          <p>
-            Lithium batteries fit your existing equipment. No modifications needed for
-            most forklifts and material handling equipment.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Fleet</span>
-          <h3>Fleet-Wide Conversion</h3>
-          <p>
-            We plan and execute full fleet conversions. Phased rollouts available to
-            fit your budget and operations schedule.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Local</span>
-          <h3>Service & Support</h3>
-          <p>
-            Not a drop-ship vendor. We install, service, and support every battery we
-            sell. On-site diagnostics and warranty support included.
-          </p>
-        </div>
+        {d.lithiumCards?.map((card: any) => (
+          <div class="service-card">
+            {card.badge && <span class="service-label">{card.badge}</span>}
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- Image break -->
   <div class="split split--reverse">
-    <div class="split-image" style="background-image: url('/images/dock-door.jpg');"></div>
+    <div class="split-image" style={`background-image: url('${d.splitImage}');`}></div>
     <div class="split-content">
-      <h2>Why Operations Managers Are Switching to Lithium</h2>
-      <p>
-        Eliminate battery swap rooms. Cut maintenance costs by 50%. Get consistent power
-        in freezer environments where lead acid fails. Our fleet conversion specialists
-        handle the transition from assessment to installation.
-      </p>
-      <a href="/contact" class="btn btn-primary">Schedule a Fleet Assessment</a>
+      <h2>{d.splitHeading}</h2>
+      <p>{d.splitText}</p>
+      <a href={d.splitCtaLink} class="btn btn-primary">{d.splitCtaText}</a>
     </div>
   </div>
 
@@ -117,63 +60,22 @@ import '../styles/global.css';
   <section class="section why-section" id="rejuvenation">
     <div class="container">
       <div class="section-header section-header--center">
-        <h2 class="section-title section-title--center">Battery Rejuvenation</h2>
-        <p class="section-subtitle">
-          Not ready for lithium? Extend the life of your lead acid batteries by up to
-          50% with our rejuvenation service. We'll prove it works for free.
-        </p>
+        <h2 class="section-title section-title--center">{d.rejuvHeading}</h2>
+        <p class="section-subtitle">{d.rejuvSubtitle}</p>
       </div>
-
       <div class="why-grid">
-        <div class="why-card">
-          <div class="why-number">01</div>
-          <div>
-            <h3>How It Works</h3>
-            <p>
-              Our rejuvenation process breaks down sulfation buildup on lead acid
-              battery plates, restoring capacity lost over time. Most batteries
-              recover 70-90% of original capacity.
-            </p>
+        {d.rejuvCards?.map((card: any, i: number) => (
+          <div class="why-card">
+            <div class="why-number">{String(i + 1).padStart(2, '0')}</div>
+            <div>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </div>
           </div>
-        </div>
-
-        <div class="why-card">
-          <div class="why-number">02</div>
-          <div>
-            <h3>Free Sample &mdash; No Risk</h3>
-            <p>
-              Send us one battery or we'll come pick it up. We'll rejuvenate it and
-              return it at no charge. See the results yourself before committing to
-              your full fleet.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-card">
-          <div class="why-number">03</div>
-          <div>
-            <h3>Fraction of Replacement Cost</h3>
-            <p>
-              A new forklift battery runs $3,000-$8,000+. Rejuvenation costs a
-              fraction of that and gives you years of additional service life.
-            </p>
-          </div>
-        </div>
-
-        <div class="why-card">
-          <div class="why-number">04</div>
-          <div>
-            <h3>Reduce Waste</h3>
-            <p>
-              Keep batteries out of the recycling stream longer. Better for your
-              budget and better for the environment. Responsible fleet management.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
-
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="/contact" class="btn btn-primary">Request Your Free Battery Sample</a>
+        <a href={d.rejuvCtaLink} class="btn btn-primary">{d.rejuvCtaText}</a>
       </div>
     </div>
   </section>
@@ -182,42 +84,16 @@ import '../styles/global.css';
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <h2 class="section-title section-title--center">Equipment We Power</h2>
-        <p class="section-subtitle">
-          Batteries for every application in your warehouse, yard, or distribution center.
-        </p>
+        <h2 class="section-title section-title--center">{d.equipHeading}</h2>
+        <p class="section-subtitle">{d.equipSubtitle}</p>
       </div>
-
       <div class="services-grid">
-        <div class="service-card">
-          <h3>Standard Forklifts</h3>
-          <p>Sit-down riders, stand-up counterbalance, and 3-wheel electric forklifts.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Narrow Aisle</h3>
-          <p>Reach trucks, order pickers, turret trucks, and very narrow aisle (VNA) equipment.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Cold Storage</h3>
-          <p>Freezer-rated batteries and equipment built to perform in sub-zero environments.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Pallet Jacks</h3>
-          <p>Electric pallet jacks, walkie riders, and end riders for dock and floor operations.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Scissor Lifts</h3>
-          <p>Battery packs for electric scissor lifts and aerial work platforms.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Tow Tractors & AGVs</h3>
-          <p>Batteries for tow tractors, burden carriers, and automated guided vehicles.</p>
-        </div>
+        {d.equipCards?.map((card: any) => (
+          <div class="service-card">
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -226,11 +102,8 @@ import '../styles/global.css';
   <section class="cta-banner">
     <div class="container">
       <div>
-        <h2>Ready to Talk Batteries?</h2>
-        <p>
-          Whether you're exploring lithium, need a rejuvenation quote, or want to
-          take us up on our free sample offer.
-        </p>
+        <h2>{d.ctaHeading}</h2>
+        <p>{d.ctaText}</p>
       </div>
       <div class="cta-actions">
         <a href="/contact" class="btn btn-primary">Contact Battery Team</a>

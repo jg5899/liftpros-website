@@ -1,0 +1,33 @@
+{
+  "seoTitle": "Forklift Repair, Preventive Maintenance & Fleet Management | Lift Pros",
+  "seoDescription": "Expert forklift and material handling equipment repair, scheduled preventive maintenance, fleet management, and mobile field service across California's Central Valley.",
+  "heroBadge": "Service & Maintenance",
+  "heroTitle": "Keep Your Fleet",
+  "heroHighlight": "Running",
+  "heroDescription": "From emergency breakdowns to scheduled PM programs, our mobile technicians and shop team keep your equipment productive and your operations moving.",
+  "heroCta1Text": "Schedule Service",
+  "heroCta1Link": "/contact",
+  "heroCta2Text": "PM Programs",
+  "heroCta2Link": "#pm",
+  "serviceCards": [
+    { "badge": "Repair", "title": "Repair & Diagnostics", "description": "Engine, transmission, hydraulic, electrical, and brake repair for all makes and models. In-shop and on-site service available." },
+    { "badge": "Mobile", "title": "Field Service", "description": "Our technicians come to you with fully stocked service vans. GPS-tracked dispatch across the entire Central Valley." },
+    { "badge": "PM", "title": "Preventive Maintenance", "description": "Scheduled PM programs tailored to your fleet. Multi-point inspections, fluid services, and compliance documentation included." },
+    { "badge": "Fleet", "title": "Fleet Management", "description": "Full lifecycle management for your equipment fleet. Service history, cost tracking, warranty management, and reporting." },
+    { "badge": "Contract", "title": "Service Contracts", "description": "Lock in rates and priority response times with a service agreement. Custom contracts based on fleet size and usage patterns." },
+    { "badge": "Warranty", "title": "Warranty Support", "description": "We track warranty coverage across your fleet and handle claims. Authorized warranty service for TAILIFT and other brands." }
+  ],
+  "bannerImage": "/images/service-technician.jpg",
+  "bannerHeading": "Fully Stocked Mobile Service Vans",
+  "bannerText": "Our technicians come to your location with the parts and tools to get you running.",
+  "equipHeading": "Equipment We Service",
+  "equipSubtitle": "If it's in your warehouse or on your dock, we can fix it.",
+  "equipCards": [
+    { "title": "Forklifts", "description": "Propane, electric, and diesel. Sit-down, stand-up, and 3-wheel. All makes and models." },
+    { "title": "Scissor Lifts", "description": "Electric and rough terrain scissor lifts. One of the few full-service scissor lift shops in the Valley." },
+    { "title": "Narrow Aisle & Cold Storage", "description": "Reach trucks, order pickers, turret trucks, and freezer-rated equipment." },
+    { "title": "Pallet Jacks & More", "description": "Electric pallet jacks, walkie riders, tow tractors, and aerial lifts." }
+  ],
+  "ctaHeading": "Need Service?",
+  "ctaText": "Emergency repair or scheduled maintenance — call us now or submit a service request online."
+}

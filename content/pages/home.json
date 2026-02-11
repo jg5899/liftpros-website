@@ -1,0 +1,50 @@
+{
+  "seoTitle": "Lift Pros | Forklift & Material Handling Service, Sales & Fleet Management",
+  "seoDescription": "Full-service forklift and material handling equipment partner in Central Valley, CA. Equipment sales, lithium batteries, repair, preventive maintenance, racking, dock doors, and parts.",
+  "heroBadge": "Central Valley's Full-Service Equipment Partner",
+  "heroTitle": "More Than",
+  "heroHighlight": "Forklift Repair",
+  "heroDescription": "Equipment sales, lithium battery solutions, preventive maintenance, fleet management, racking, dock doors, and field service across California's Central Valley.",
+  "heroCta1Text": "Request Service",
+  "heroCta1Link": "/contact",
+  "heroCta2Text": "Battery Solutions",
+  "heroCta2Link": "/batteries",
+  "heroStats": [
+    { "value": "1,000+", "label": "Fleet Units Managed" },
+    { "value": "50+", "label": "Years Experience" },
+    { "value": "Central CA", "label": "Fresno to Bakersfield" }
+  ],
+  "services": [
+    { "badge": "Batteries", "title": "Battery Solutions", "description": "Premier lithium battery sales and service center. Lead acid rejuvenation with free first sample to prove it works.", "link": "/batteries" },
+    { "badge": "Sales", "title": "Equipment Sales", "description": "New and used forklifts, scissor lifts, narrow aisle, and cold storage equipment. Authorized TAILIFT dealer.", "link": "/equipment" },
+    { "badge": "Service", "title": "Service & Maintenance", "description": "Repair, preventive maintenance programs, fleet management, and mobile field service across the Central Valley.", "link": "/service" },
+    { "badge": "Facility", "title": "Racking & Dock Doors", "description": "Warehouse racking systems and dock door sales, installation, and service. Complete facility solutions.", "link": "/racking-dock-doors" },
+    { "badge": "Parts", "title": "Parts Supply", "description": "OEM and aftermarket parts for all major brands. Fast sourcing with real-time availability.", "link": "/parts" },
+    { "badge": "Free", "title": "Junk Lift Haul Away", "description": "Dead forklift or scissor lift? We'll haul it away free at no cost from anywhere in the Central Valley.", "link": "/contact" }
+  ],
+  "batterySplitImage": "/images/electric-forklift.jpg",
+  "batterySplitHeading": "Premier Battery Sales & Service Center",
+  "batterySplitText": "The industry is shifting to lithium and we're leading the charge in the Central Valley. From full fleet conversions to single-unit upgrades, we sell, install, and service every battery. Not ready for lithium? Try our lead acid rejuvenation — free first sample.",
+  "batterySplitCtaText": "Battery Solutions",
+  "batterySplitCtaLink": "/batteries",
+  "whyUs": [
+    { "title": "Fast Response Times", "description": "Mobile technicians dispatched across the Central Valley. GPS-tracked service vans so you know when help is arriving." },
+    { "title": "Battery Experts", "description": "Premier lithium battery sales and service center. Free battery rejuvenation samples to prove the value before you commit." },
+    { "title": "Transparent Pricing", "description": "Detailed job costing on every work order. Labor, parts, and travel broken out clearly. No surprises on your invoice." },
+    { "title": "Single Source", "description": "Equipment, batteries, racking, dock doors, parts, and service. One vendor for your entire facility instead of juggling five." }
+  ],
+  "equipmentSplitImage": "/images/cold-storage.jpg",
+  "equipmentSplitHeading": "New & Used Equipment Sales",
+  "equipmentSplitText": "Authorized TAILIFT dealer with new and certified used forklifts, scissor lifts, narrow aisle, and cold storage equipment. We service everything we sell — local support from day one. Dead lift? We'll haul it away free.",
+  "equipmentSplitCtaText": "View Equipment",
+  "equipmentSplitCtaLink": "/equipment",
+  "bannerImage": "/images/warehouse-racking.jpg",
+  "bannerHeading": "Complete Facility Solutions",
+  "bannerText": "Racking, dock doors, equipment, batteries, parts, and service — one call.",
+  "ctaHeading": "Ready to Get Started?",
+  "ctaText": "Whether you need a quote, a service call, or want to talk about upgrading your fleet — we're here.",
+  "ctaCta1Text": "Contact Us",
+  "ctaCta1Link": "/contact",
+  "ctaCta2Text": "Call Now",
+  "ctaCta2Link": "tel:5594839300"
+}

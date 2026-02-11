@@ -1,0 +1,20 @@
+{
+  "seoTitle": "Forklift & Material Handling Parts | OEM & Aftermarket | Lift Pros",
+  "seoDescription": "OEM and aftermarket forklift parts for all major brands. Fast sourcing, competitive pricing, and real-time availability. Serving California's Central Valley.",
+  "heroBadge": "Parts Department",
+  "heroTitle": "Parts",
+  "heroHighlight": "Supply",
+  "heroDescription": "OEM and aftermarket parts for all major brands of forklifts and material handling equipment. Fast sourcing with real-time availability across multiple suppliers.",
+  "heroCta1Text": "Request Parts",
+  "heroCta1Link": "/contact",
+  "featureCards": [
+    { "badge": "Speed", "title": "Fast Sourcing", "description": "Real-time availability across multiple suppliers. Most parts available same-day or next-day from our regional distribution network." },
+    { "badge": "Selection", "title": "OEM & Aftermarket", "description": "We source both OEM and quality aftermarket parts. Get the right part at the right price for your application." },
+    { "badge": "Brands", "title": "All Major Brands", "description": "Parts for Toyota, Crown, Hyster, Yale, Raymond, Clark, TAILIFT, and more. If it's in your warehouse, we have parts for it." },
+    { "badge": "Support", "title": "Technical Support", "description": "Not sure which part you need? Our parts team can help identify the right part by model, serial number, or description." },
+    { "badge": "Delivery", "title": "Delivery Available", "description": "Parts delivered to your location across the Central Valley. Emergency parts runs available for critical equipment down situations." },
+    { "badge": "Accounts", "title": "Fleet Accounts", "description": "Volume pricing and net terms for fleet accounts. Consolidated billing and parts history tracking for your entire fleet." }
+  ],
+  "ctaHeading": "Need Parts?",
+  "ctaText": "Call us with your model and serial number and we'll get you a quote fast."
+}

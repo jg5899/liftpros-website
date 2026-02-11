@@ -1,0 +1,33 @@
+{
+  "seoTitle": "Warehouse Racking & Dock Door Sales, Installation & Service | Lift Pros",
+  "seoDescription": "Warehouse racking systems and dock door sales, installation, and repair in Central Valley, CA. Pallet racking, drive-in, push-back, and dock levelers. Serving Fresno, Bakersfield, and Stockton.",
+  "heroBadge": "Facility Equipment",
+  "heroTitle": "Racking &",
+  "heroHighlight": "Dock Door",
+  "heroDescription": "Complete warehouse infrastructure — from pallet racking installation to dock door service. We design, install, and maintain the systems that keep your facility running.",
+  "heroCta1Text": "Get a Quote",
+  "heroCta1Link": "/contact",
+  "rackingHeading": "Racking Systems",
+  "rackingSubtitle": "New installations, reconfigurations, and repairs. We work with your layout to maximize storage density and picking efficiency.",
+  "rackingCards": [
+    { "badge": "Standard", "title": "Selective Pallet Racking", "description": "The most versatile racking system. Direct access to every pallet position. Ideal for high-SKU operations." },
+    { "badge": "High Density", "title": "Drive-In & Drive-Through", "description": "High-density storage for large quantities of similar products. Maximize your cube utilization." },
+    { "badge": "Dynamic", "title": "Push-Back & Flow Rack", "description": "Dynamic storage systems for FIFO and LIFO inventory management. Ideal for food, beverage, and dated products." },
+    { "badge": "Repair", "title": "Racking Repair", "description": "Damaged uprights, beams, and wire decking replaced. Safety inspections and compliance documentation provided." },
+    { "badge": "Design", "title": "Layout & Design", "description": "We'll assess your space, product mix, and workflow to design a racking layout that maximizes storage and efficiency." },
+    { "badge": "Compliance", "title": "Safety & Compliance", "description": "Rack inspections, column protectors, safety netting, and load signage. Keep your warehouse OSHA-compliant." }
+  ],
+  "bannerImage": "/images/cold-storage.jpg",
+  "bannerHeading": "From Design to Installation",
+  "bannerText": "We assess your space, design the layout, and handle the full build.",
+  "dockHeading": "Dock Doors & Loading Equipment",
+  "dockSubtitle": "Sales, installation, and service for dock doors, levelers, seals, and related loading dock equipment.",
+  "dockCards": [
+    { "title": "Dock Doors", "description": "Sectional, rolling steel, and high-speed dock doors. New installations and replacements for existing openings." },
+    { "title": "Dock Levelers", "description": "Mechanical, hydraulic, and air-powered dock levelers. Bridge the gap between your dock and the trailer safely." },
+    { "title": "Service & Repair", "description": "Springs, cables, panels, tracks, and motors. We repair all makes and models of dock doors and loading equipment." },
+    { "title": "Dock Accessories", "description": "Bumpers, seals, shelters, lights, and safety equipment. Everything your loading dock needs to operate safely." }
+  ],
+  "ctaHeading": "Need Racking or Dock Work?",
+  "ctaText": "New install, repair, or reconfiguration — tell us what you need and we'll get you a quote."
+}

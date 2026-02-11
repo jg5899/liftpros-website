@@ -3,26 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import client from '../../tina/__generated__/client';
+
+const result = await client.queries.parts({ relativePath: 'parts.json' });
+const d = result.data.parts;
 ---
 
-<Layout
-  title="Forklift Parts | OEM & Aftermarket | Fast Delivery | Lift Pros"
-  description="OEM and aftermarket forklift parts for all major brands. Fast sourcing and delivery across California's Central Valley. Call or order online."
->
+<Layout title={d.seoTitle} description={d.seoDescription}>
   <Header />
 
   <section class="hero page-hero" style="margin-top: 102px;">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-badge">Parts Supply</span>
-        <h1>The Parts You Need, <span class="highlight">Fast</span></h1>
-        <p>
-          OEM and aftermarket parts for forklifts, scissor lifts, and material
-          handling equipment. All major brands. Fast sourcing with real-time
-          supplier availability.
-        </p>
+        <span class="hero-badge">{d.heroBadge}</span>
+        <h1>{d.heroTitle} <span class="highlight">{d.heroHighlight}</span></h1>
+        <p>{d.heroDescription}</p>
         <div class="hero-buttons">
-          <a href="/contact" class="btn btn-primary">Order Parts</a>
+          <a href={d.heroCta1Link} class="btn btn-primary">{d.heroCta1Text}</a>
           <a href="tel:5594839300" class="btn btn-outline">Call Parts Desk</a>
         </div>
       </div>
@@ -32,49 +29,16 @@ import '../styles/global.css';
   <section class="section">
     <div class="container">
       <div class="section-header section-header--center">
-        <h2 class="section-title section-title--center">What We Stock & Source</h2>
-        <p class="section-subtitle">
-          If it goes on a lift, we can get it. Most common parts in stock or
-          available next business day.
-        </p>
+        <h2 class="section-title section-title--center">Parts Services</h2>
       </div>
-
       <div class="services-grid">
-        <div class="service-card">
-          <span class="service-label">Engine</span>
-          <h3>Engine & Drivetrain</h3>
-          <p>Filters, belts, hoses, starters, alternators, water pumps, gaskets, and engine rebuild kits.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Hydraulic</span>
-          <h3>Hydraulics</h3>
-          <p>Cylinders, pumps, valves, seals, hoses, and fittings. Hydraulic oil and filtration.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Electrical</span>
-          <h3>Electrical</h3>
-          <p>Controllers, contactors, switches, wiring harnesses, lights, and battery connectors.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Wheels</span>
-          <h3>Tires & Wheels</h3>
-          <p>Pneumatic, solid, and polyurethane tires. Press-on and bolt-on. All sizes in stock or quick order.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Brakes</span>
-          <h3>Brakes & Steering</h3>
-          <p>Brake shoes, pads, drums, master cylinders, steering components, and axle parts.</p>
-        </div>
-
-        <div class="service-card">
-          <span class="service-label">Power</span>
-          <h3>Batteries & Chargers</h3>
-          <p>Lead acid, lithium, and chargers for all applications. See our <a href="/batteries" style="color: var(--orange); font-weight: 600;">battery solutions</a> page.</p>
-        </div>
+        {d.featureCards?.map((card: any) => (
+          <div class="service-card">
+            {card.badge && <span class="service-label">{card.badge}</span>}
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -83,11 +47,8 @@ import '../styles/global.css';
     <div class="container">
       <div class="section-header section-header--center">
         <h2 class="section-title section-title--center">Brands We Support</h2>
-        <p class="section-subtitle">
-          Parts for all major forklift and material handling brands.
-        </p>
+        <p class="section-subtitle">Parts for all major forklift and material handling brands.</p>
       </div>
-
       <div class="why-grid">
         <div class="why-card">
           <div class="why-number">01</div>
@@ -124,11 +85,8 @@ import '../styles/global.css';
   <section class="cta-banner">
     <div class="container">
       <div>
-        <h2>Need a Part?</h2>
-        <p>
-          Call our parts desk with your model and serial number. We'll get
-          you a price and availability in minutes.
-        </p>
+        <h2>{d.ctaHeading}</h2>
+        <p>{d.ctaText}</p>
       </div>
       <div class="cta-actions">
         <a href="/contact" class="btn btn-primary">Request Parts</a>
